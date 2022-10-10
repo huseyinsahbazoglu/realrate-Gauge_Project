@@ -13,7 +13,7 @@ import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Hooks extends BaseSteps{
+public class Hooks extends BaseSteps {
     protected static WebDriver operaDriver;
     protected static WebDriver chromeDriver;
     OperaOptions operaOptions;
@@ -36,6 +36,7 @@ public class Hooks extends BaseSteps{
         H2jdbcCreate();
         System.out.println("H2 Database was created.");
     }
+
     /*
         @BeforeScenario
         public void beforeScenario(){
@@ -75,6 +76,7 @@ public class Hooks extends BaseSteps{
         stopStmtAndConn();
         System.out.println("Browsers were closed.");
     }
+
     public ChromeOptions chromeOptions() {
         chromeOptions = new ChromeOptions();
         Map<String, Object> prefs = new HashMap<String, Object>();
@@ -82,13 +84,15 @@ public class Hooks extends BaseSteps{
 
         chromeOptions.setExperimentalOption("prefs", prefs)
                 //.addArguments("--headless")
-                .addArguments("--disable-notifications");
-                //.addArguments("--start-maximized")
-                //.addArguments("--start-fullscreen");
+                .addArguments("--disable-notifications")
+                .addArguments("--window-size=500,250");
+        //.addArguments("--start-maximized")
+        //.addArguments("--start-fullscreen");
         System.setProperty("webdriver.chrome.driver", System.getenv().getOrDefault("webdriver-chrome-driver", "webdrivers/chromedriver_v104.0.5112.79"));
         chromeOptions.merge(chromeOptions);
         return chromeOptions;
     }
+
     public OperaOptions operaOptions() {
         operaOptions = new OperaOptions();
         Map<String, Object> prefs = new HashMap<String, Object>();

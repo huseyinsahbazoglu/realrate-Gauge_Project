@@ -6,10 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="realrate" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="canlidoviz" target="1.8" />
+      <module name="realrate" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
