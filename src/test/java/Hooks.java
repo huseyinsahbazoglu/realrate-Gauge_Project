@@ -88,7 +88,7 @@ public class Hooks extends BaseSteps {
                 .addArguments("--window-size=500,250");
         //.addArguments("--start-maximized")
         //.addArguments("--start-fullscreen");
-        System.setProperty("webdriver.chrome.driver", System.getenv().getOrDefault("webdriver-chrome-driver", "webdrivers/chromedriver_v104.0.5112.79"));
+        System.setProperty("webdriver.chrome.driver", System.getenv().getOrDefault("webdriver-chrome-driver", "webdrivers/chromedriver_v106.0.5249.61"));
         chromeOptions.merge(chromeOptions);
         return chromeOptions;
     }
